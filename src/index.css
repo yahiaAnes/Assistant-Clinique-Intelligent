@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary-50: #f0fdfa;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #0d9488;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #134e4a;
+}
+
+/* Custom Scrollbar styled for Frosted Glass */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Glassmorphism Styles matching Frosted Glass Design */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-panel-heavy {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(248, 250, 252, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.custom-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(148, 163, 184, 0.12), 0 5px 15px -5px rgba(148, 163, 184, 0.08);
+}
+
+/* Translucent interactive forms */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.7) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #0ea5e9 !important; /* Medical blue highlight matching the theme */
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15) !important;
+}
+
+/* Pulsate mild animation */
+.pulsate-mild {
+  animation: pulse-mild 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-mild {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .95;
+    transform: scale(0.995);
+  }
+}

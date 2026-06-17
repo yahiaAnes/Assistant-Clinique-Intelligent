@@ -1,0 +1,6 @@
+{
+  "name": "Assistant d'Examen Clinique",
+  "description": "Assistant interactif d'examen clinique pour étudiants en médecine, spécialisé dans l'évaluation de la thyroïde et du pied diabétique.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
